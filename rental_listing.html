@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Furnished Room for Rent in Cupertino, CA - $2,100/mo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6741 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header .price {
+            font-size: 2em;
+            font-weight: 600;
+            color: #90EE90;
+            margin: 15px 0;
+        }
+
+        .header .availability {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .header .location {
+            font-size: 1.1em;
+            margin-top: 10px;
+            opacity: 0.85;
+        }
+
+        /* Highlights */
+        .highlights {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .highlights h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #4a6741;
+            padding-bottom: 10px;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #4a6741;
+        }
+
+        .highlight-item span {
+            font-size: 1.5em;
+            margin-right: 12px;
+        }
+
+        /* Gallery */
+        .gallery-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .gallery-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #4a6741;
+            padding-bottom: 10px;
+        }
+
+        .gallery-category {
+            margin-bottom: 30px;
+        }
+
+        .gallery-category h3 {
+            color: #4a6741;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Details */
+        .details-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .details-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #4a6741;
+            padding-bottom: 10px;
+        }
+
+        .details-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .detail-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .detail-card h3 {
+            color: #4a6741;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .detail-card ul {
+            list-style: none;
+        }
+
+        .detail-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .detail-card li:last-child {
+            border-bottom: none;
+        }
+
+        .detail-card li::before {
+            content: "✓ ";
+            color: #4a6741;
+            font-weight: bold;
+        }
+
+        /* Ideal Tenant */
+        .tenant-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .tenant-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #4a6741;
+            padding-bottom: 10px;
+        }
+
+        .tenant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .tenant-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tenant-item span {
+            display: block;
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+        }
+
+        .contact-item span {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .contact-item a {
+            color: #90EE90;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-text {
+            margin-top: 25px;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header .price {
+                font-size: 1.5em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .gallery-grid img {
+                height: 180px;
+            }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Modern Furnished Room for Rent</h1>
+        <div class="price">$2,100/month</div>
+        <div class="availability">Available: February 28, 2026</div>
+        <div class="location">Cupertino, CA - Heart of Silicon Valley</div>
+    </div>
+
+    <div class="container">
+        <!-- Highlights -->
+        <section class="highlights">
+            <h2>Property Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <span>🛏️</span>
+                    <div>Fully Furnished Room</div>
+                </div>
+                <div class="highlight-item">
+                    <span>🚿</span>
+                    <div>Private Bathroom</div>
+                </div>
+                <div class="highlight-item">
+                    <span>💼</span>
+                    <div>Built-in Office Space</div>
+                </div>
+                <div class="highlight-item">
+                    <span>💡</span>
+                    <div>Utilities Included</div>
+                </div>
+                <div class="highlight-item">
+                    <span>🚗</span>
+                    <div>Street Parking Available</div>
+                </div>
+                <div class="highlight-item">
+                    <span>📅</span>
+                    <div>Month-to-Month Lease</div>
+                </div>
+                <div class="highlight-item">
+                    <span>🏢</span>
+                    <div>Near Apple & Tech Hubs</div>
+                </div>
+                <div class="highlight-item">
+                    <span>👩‍💼</span>
+                    <div>Professional Housemate</div>
+                </div>
+                <div class="highlight-item">
+                    <span>🔋</span>
+                    <div>Tesla Powerwall System</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="gallery-section">
+            <h2>Photo Gallery</h2>
+
+            <!-- Bedroom -->
+            <div class="gallery-category">
+                <h3>Bedroom</h3>
+                <div class="gallery-grid">
+                    <img src="IMG_4466.jpeg" alt="Bedroom view with bed and accent wall" onclick="openLightbox(this)">
+                    <img src="IMG_4467.jpeg" alt="Bedroom with closet area" onclick="openLightbox(this)">
+                    <img src="IMG_4468.jpeg" alt="Bedroom with window and nightstand" onclick="openLightbox(this)">
+                    <img src="IMG_4469.jpeg" alt="Bedroom wide view" onclick="openLightbox(this)">
+                    <img src="IMG_4474.jpeg" alt="Bedroom with TV and furniture" onclick="openLightbox(this)">
+                    <img src="IMG_4475.jpeg" alt="Bedroom with storage and decor" onclick="openLightbox(this)">
+                    <img src="IMG_4476.jpeg" alt="Bedroom overview" onclick="openLightbox(this)">
+                </div>
+            </div>
+
+            <!-- Private Bathroom -->
+            <div class="gallery-category">
+                <h3>Private Bathroom</h3>
+                <div class="gallery-grid">
+                    <img src="IMG_4470.jpeg" alt="Modern bathroom with glass shower" onclick="openLightbox(this)">
+                    <img src="IMG_4471.jpeg" alt="Bathroom with vanity and toilet" onclick="openLightbox(this)">
+                </div>
+            </div>
+
+            <!-- Office/Study Area -->
+            <div class="gallery-category">
+                <h3>Built-in Office Area</h3>
+                <div class="gallery-grid">
+                    <img src="IMG_4472.jpeg" alt="Office desk with chair" onclick="openLightbox(this)">
+                    <img src="IMG_4473.jpeg" alt="Office storage and workspace" onclick="openLightbox(this)">
+                </div>
+            </div>
+
+            <!-- Shared Kitchen & Laundry -->
+            <div class="gallery-category">
+                <h3>Shared Kitchen & Laundry</h3>
+                <div class="gallery-grid">
+                    <img src="Basement_Kitchen_1.jpg" alt="Modern kitchen with dining area and starburst chandelier" onclick="openLightbox(this)">
+                    <img src="basement_kitchen_2.jpg" alt="Kitchen with stainless steel refrigerator and bar seating" onclick="openLightbox(this)">
+                    <img src="basement_kitchen_3.jpg" alt="Open kitchen, laundry and living area" onclick="openLightbox(this)">
+                    <img src="basement_kitchen_4.jpg" alt="Kitchen with white cabinets and modern appliances" onclick="openLightbox(this)">
+                    <img src="basement_kitchen_5.jpg" alt="In-unit LG washer and dryer" onclick="openLightbox(this)">
+                    <img src="basement_kitchen_6.jpg" alt="Laundry area with kitchen sink" onclick="openLightbox(this)">
+                </div>
+            </div>
+
+            <!-- Front of House -->
+            <div class="gallery-category">
+                <h3>Front of House</h3>
+                <div class="gallery-grid">
+                    <img src="front_door_picture_1.jpg" alt="Modern home exterior with Tesla and turf lawn" onclick="openLightbox(this)">
+                    <img src="front_door_picture_2.jpg" alt="House front with garage and landscaping" onclick="openLightbox(this)">
+                    <img src="front_door_picture_4.jpg" alt="Front yard with artificial turf and patio" onclick="openLightbox(this)">
+                    <img src="front_door_picture_5.jpg" alt="Modern front entrance with house number" onclick="openLightbox(this)">
+                    <img src="front_door_picture_6.jpg" alt="Full front view with two Tesla vehicles" onclick="openLightbox(this)">
+                </div>
+            </div>
+
+            <!-- Smart Home Features -->
+            <div class="gallery-category">
+                <h3>Smart Home Features</h3>
+                <div class="gallery-grid">
+                    <img src="tesla_powerall_picture.jpg" alt="Tesla Powerwall battery storage" onclick="openLightbox(this)">
+                    <img src="walkway_picture_1.jpg" alt="Side walkway with multiple Tesla Powerwalls" onclick="openLightbox(this)">
+                </div>
+            </div>
+
+            <!-- Exterior/Patio -->
+            <div class="gallery-category">
+                <h3>Exterior & Patio</h3>
+                <div class="gallery-grid">
+                    <img src="IMG_0121.jpeg" alt="Modern exterior with wooden deck" onclick="openLightbox(this)">
+                    <img src="IMG_0122.jpeg" alt="Patio with outdoor seating" onclick="openLightbox(this)">
+                    <img src="IMG_0123.jpeg" alt="Deck and lawn area" onclick="openLightbox(this)">
+                    <img src="IMG_0124.jpeg" alt="Outdoor furniture and landscaping" onclick="openLightbox(this)">
+                    <img src="IMG_0125.jpeg" alt="Garden and deck view" onclick="openLightbox(this)">
+                    <img src="IMG_0126.jpeg" alt="Modern architecture exterior" onclick="openLightbox(this)">
+                    <img src="IMG_0127.jpeg" alt="Full exterior view" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Room Details -->
+        <section class="details-section">
+            <h2>Room Details</h2>
+            <div class="details-content">
+                <div class="detail-card">
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Fully furnished bedroom with queen bed</li>
+                        <li>Private modern bathroom with glass shower</li>
+                        <li>Built-in desk and office space</li>
+                        <li>Dresser and storage cabinets</li>
+                        <li>Wall-mounted TV</li>
+                        <li>Crystal chandelier lighting</li>
+                        <li>Climate control (HVAC)</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Utilities & Amenities</h3>
+                    <ul>
+                        <li>All utilities included in rent</li>
+                        <li>Water and trash included</li>
+                        <li>Modern shared kitchen with stainless steel appliances</li>
+                        <li>In-unit LG washer and dryer</li>
+                        <li>Tesla Powerwall backup battery system</li>
+                        <li>Ample street parking</li>
+                        <li>Beautiful outdoor patio</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Living Arrangement</h3>
+                    <ul>
+                        <li>Lower level of modern home</li>
+                        <li>Share kitchen/laundry with one female tenant</li>
+                        <li>Housemate is a senior banking executive</li>
+                        <li>Quiet, professional environment</li>
+                        <li>Landlord works in high-tech industry</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Location Benefits</h3>
+                    <ul>
+                        <li>Heart of Silicon Valley</li>
+                        <li>Near Apple headquarters</li>
+                        <li>Close to major tech companies</li>
+                        <li>Easy access to highways 85 & 280</li>
+                        <li>Near shopping and dining</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ideal Tenant -->
+        <section class="tenant-section">
+            <h2>Looking for the Ideal Tenant</h2>
+            <div class="tenant-grid">
+                <div class="tenant-item">
+                    <span>💻</span>
+                    <div>Tech Professional</div>
+                </div>
+                <div class="tenant-item">
+                    <span>🤫</span>
+                    <div>Quiet & Respectful</div>
+                </div>
+                <div class="tenant-item">
+                    <span>✨</span>
+                    <div>Clean & Organized</div>
+                </div>
+                <div class="tenant-item">
+                    <span>🚭</span>
+                    <div>Non-Smoker</div>
+                </div>
+                <div class="tenant-item">
+                    <span>🐾</span>
+                    <div>No Pets</div>
+                </div>
+                <div class="tenant-item">
+                    <span>🙅</span>
+                    <div>Drug-Free</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section">
+            <h2>Interested? Let's Connect!</h2>
+            <p>This beautiful room won't last long. Reach out today to schedule a viewing.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:floralqf@gmail.com">floralqf@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="tel:408-348-4923">408-348-4923</a>
+                </div>
+            </div>
+            <p class="cta-text">Please include a brief introduction about yourself and your work when reaching out.</p>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>$2,100/month | Available February 28, 2026 | Cupertino, CA</p>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
